@@ -8,7 +8,7 @@ function Wallet() {
       <BasicTable
         Headerlogo={<BackupTableIcon style={style} />}
         HeaderText1={"Wallet"}
-        secondaryHeader={secondaryHeader}
+        secondaryHeader={"Acount"}
       />
     </div>
   );

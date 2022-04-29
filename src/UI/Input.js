@@ -46,9 +46,8 @@ export default function Input(props) {
         paddingBottom: { paddingBottom },
       }}>
       <CssTextField
-        // className={` shadow-none ${meta.touched && meta.error && "is-invalid"}`}
         {...props}
-        // {...field}
+        {...field}
         margin='normal'
         InputLabelProps={{
           style: {
@@ -67,11 +66,6 @@ export default function Input(props) {
           },
         }}
       />{" "}
-      {/* <ErrorMessage
-        component='div'
-        name={field.name}
-        className='text-danger p-2 '
-      /> */}
     </Box>
   );
 }

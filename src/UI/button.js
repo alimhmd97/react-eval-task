@@ -8,7 +8,7 @@ const Input = styled("input")({
   display: "none",
 });
 
-export function UiButton({ name, styleWidth }) {
+export function UiButton({ name, styleWidth, disabled }) {
   const BWidth = styleWidth ? styleWidth : "350px";
   return (
     <Stack
@@ -18,6 +18,7 @@ export function UiButton({ name, styleWidth }) {
       width={BWidth}
       spacing={2}>
       <Button
+        disable={disabled}
         type='submit'
         variant='contained'
         component='span'

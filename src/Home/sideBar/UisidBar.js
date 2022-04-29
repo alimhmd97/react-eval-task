@@ -24,10 +24,14 @@ import { UiButton } from "../../UI/button";
 import { BasicButtons } from "../../UI/Buttons";
 import { FormControlLabelPosition } from "../../UI/switch";
 import { CustomCarousel } from "./Carousel";
-// import Carousel from "react-bootstrap/Carousel";
-// import curImg1 from "../../assets/cur.jpg";
-// import curImg2 from "../../assets/1.jpg";
-// import curImg3 from "../../assets/cur2.jpg";
+import { Wallet } from "../Wallet";
+import { HomeCards } from "../HomeCards";
+import BackupTableIcon from "@mui/icons-material/BackupTable";
+import { OneRowTable } from "../../UI/OneRowTable";
+import img1 from "../../assets/1.jpg";
+import img3 from "../../assets/cur2.jpg";
+import img2 from "../../assets/cur.jpg";
+import { CopyTrading } from "../CopyTrading";
 
 const drawerWidth = 220;
 
@@ -75,6 +79,7 @@ const styles = (theme) => ({
   drawerOpen: {
     color: "#b4bcc2",
     backgroundColor: "#2b2b3c",
+
     width: drawerWidth,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
@@ -144,13 +149,13 @@ class MiniDrawer extends React.Component {
     const open = Boolean(anchorEl);
     return (
       <div className={classes.root}>
-        <CssBaseline />
-        <AppBar
+        {/* <CssBaseline /> */}
+        {/* <AppBar
           position='fixed'
           className={classes.appBar}
           fooJon={classNames(classes.appBar, {
             [classes.appBarShift]: this.state.open,
-          })}></AppBar>
+          })}></AppBar> */}
         <Drawer
           variant='permanent'
           className={classNames(classes.drawer, {
@@ -232,7 +237,7 @@ class MiniDrawer extends React.Component {
             {" "}
             <div style={{ backgroundColor: "#393a4c" }}>
               <div className={`row ${styles.first_section}`}>
-                <div className={`col-6  ${styles.right_part} `}>
+                <div className={`col-12 col-lg-6  ${styles.right_part} `}>
                   <OutlinedCard>
                     <div
                       style={{
@@ -272,17 +277,65 @@ class MiniDrawer extends React.Component {
                     <div style={{ display: "flex" }}></div>
                   </OutlinedCard>
                 </div>
-                <div className={`col-6 ${styles.slider}`}>
+                <div className={`col-12 col-lg-6  ${styles.slider}`}>
                   {" "}
                   <OutlinedCard>
                     <CustomCarousel />
                   </OutlinedCard>
-                </div>
+                </div>{" "}
+                <OutlinedCard>
+                  <Wallet />
+                </OutlinedCard>
+                <div>
+                  {" "}
+                  <OutlinedCard>
+                    <OneRowTable
+                      Headerlogo={
+                        <BackupTableIcon
+                          style={{ color: "#80808a", fontSize: "2rem" }}
+                        />
+                      }
+                      HeaderText1={"Margin Trading"}
+                      HeaderText2={"Open New Account"}
+                      secondaryHeader={"Acount"}
+                    />{" "}
+                  </OutlinedCard>
+                  <OutlinedCard>
+                    <OneRowTable
+                      Headerlogo={
+                        <BackupTableIcon
+                          style={{ color: "#80808a", fontSize: "2rem" }}
+                        />
+                      }
+                      HeaderText1={"Yeild Accounts"}
+                      HeaderText2={"Start earning"}
+                      secondaryHeader={"Acount"}
+                      nothingToDisplay={true}
+                    />{" "}
+                  </OutlinedCard>
+                </div>{" "}
+                <CopyTrading />
+                <HomeCards
+                  Headerlogo={<GroupOutlinedIcon />}
+                  HeaderText1={"copy trading | portflio"}
+                  HeaderText2={"start new following"}
+                  Img={img1}
+                />{" "}
+                <HomeCards
+                  Headerlogo={<GroupOutlinedIcon />}
+                  HeaderText1={"copy trading | stratigies"}
+                  HeaderText2={"open new strategy"}
+                  Img={img2}
+                />
+                <HomeCards
+                  Headerlogo={<GroupOutlinedIcon />}
+                  HeaderText1={"contests"}
+                  HeaderText2={"join new contests"}
+                  Img={img3}
+                />
               </div>
             </div>
           </Typography>
-
-          <Typography paragraph>content</Typography>
         </main>
       </div>
     );

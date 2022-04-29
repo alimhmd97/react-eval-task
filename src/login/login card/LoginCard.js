@@ -89,13 +89,14 @@ export function LoginCard() {
                 label={"email"}
                 type={"email"}
                 paddingBottom={"34px"}
+                key={"das8"}
               />
               <Input
                 value={formik.values.password}
                 onChange={formik.handleChange}
-                error={
-                  formik.touched.password && Boolean(formik.errors.password)
-                }
+                // error={
+                //   formik.touched.password && Boolean(formik.errors.password)
+                // }
                 helperText={formik.touched.password && formik.errors.password}
                 name={"password"}
                 label={"password"}
@@ -117,7 +118,10 @@ export function LoginCard() {
             </div>{" "}
             <div className={styles.submit_button}>
               {" "}
-              <UiButton name='Login' />
+              <UiButton
+                name='Login'
+                disabled={formik.errors.password && formik.errors.password}
+              />
               <div
                 style={{
                   width: "100%",

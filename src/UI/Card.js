@@ -16,13 +16,18 @@ const bull = (
 
 const card = (
   <React.Fragment
-    style={{ backgroundColor: "#393a4c", border: "0px" }}></React.Fragment>
+    style={{
+      backgroundColor: "#393a4c",
+      border: "0px",
+    }}></React.Fragment>
 );
 
 export function OutlinedCard({ children }) {
   return (
     <Box sx={{ minWidth: 275 }}>
-      <Card variant='outlined' sx={{ backgroundColor: "#393a4c" }}>
+      <Card
+        variant='outlined'
+        sx={{ backgroundColor: "#393a4c", margin: "7px" }}>
         <CardContent
           sx={{
             backgroundColor: "#2b2b3c",
