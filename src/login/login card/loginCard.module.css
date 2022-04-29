@@ -1,0 +1,28 @@
+.submit_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1rem 1rem;
+}
+.login_text {
+  font-weight: bolder !important;
+  font-size: 1rem !important;
+  margin-bottom: 10px !important;
+  padding: 1.5rem !important;
+}
+
+.LockIcon {
+  font-size: 2rem !important;
+}
+
+@media (max-width: 991px) {
+  .responsive_form {
+    margin: 0 auto !important;
+  }
+}
+@media (max-width: 768px) {
+  .responsive_form {
+    border: unset !important;
+  }
+}

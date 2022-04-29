@@ -1,0 +1,40 @@
+.header_icon {
+  background-color: #2b2b3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #80808a;
+  padding: 15px;
+  border: 1px solid #727c8a;
+}
+.header {
+  z-index: 2000;
+  position: fixed;
+  background-color: #2b2b3c;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.nav_item {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  display: flex;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0 18px;
+  background-color: #2b2b3c;
+  color: #80808a;
+}
+.nav_item:hover {
+  color: white;
+}
+.nav_item:hover:after {
+  content: "";
+  height: 3px;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+}
