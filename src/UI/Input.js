@@ -1,38 +1,12 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import { withStyles } from "@material-ui/core/styles";
-import { ErrorMessage, useField } from "formik";
+import { useField } from "formik";
 
 export const Input = (props) => {
-  const [field, meta] = useField(props);
+  const [field] = useField(props);
   const paddingBottom = props?.paddingBottom;
-  const CssTextField = withStyles({
-    root: {
-      "& fieldset": {
-        borderRadius: `10px`,
-        margin: "0",
-      },
-      "& label.Mui-focused": {
-        color: "white",
-      },
-      "& .MuiInput-underline:after": {
-        borderBottomColor: "white",
-      },
-      "& .MuiOutlinedInput-root": {
-        "& fieldset": {
-          borderColor: "white",
-        },
-        "&:hover fieldset": {
-          borderColor: "white",
-        },
-        "&.Mui-focused fieldset": {
-          borderColor: "#48a6eb",
-        },
-        color: "white",
-      },
-    },
-  })(TextField);
+
   return (
     <Box
       sx={{
