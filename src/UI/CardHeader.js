@@ -3,7 +3,6 @@ import ControlPointDuplicateIcon from "@mui/icons-material/ControlPointDuplicate
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { PlayCircleFilledWhite } from "@material-ui/icons";
 function CardHeader({ Headerlogo, HeaderText1, HeaderText2 }) {
-  console.log(typeof borderB);
   return (
     <div
       style={{

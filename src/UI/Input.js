@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import { withStyles } from "@material-ui/core/styles";
 import { ErrorMessage, useField } from "formik";
 
-export default function Input(props) {
+export const Input = (props) => {
   const [field, meta] = useField(props);
   const paddingBottom = props?.paddingBottom;
   const CssTextField = withStyles({
@@ -68,4 +68,4 @@ export default function Input(props) {
       />{" "}
     </Box>
   );
-}
+};

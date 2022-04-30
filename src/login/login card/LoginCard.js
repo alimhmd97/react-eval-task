@@ -2,7 +2,7 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import LockIcon from "@mui/icons-material/Lock";
 import Typography from "@mui/material/Typography";
-import Input from "../../UI/Input";
+import { Input } from "../../UI/Input";
 import { UiButton } from "../../UI/button";
 import styles from "./loginCard.module.css";
 import { Formik } from "formik";
