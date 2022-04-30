@@ -3,13 +3,13 @@ import Card from "@mui/material/Card";
 import LockIcon from "@mui/icons-material/Lock";
 import Typography from "@mui/material/Typography";
 import { Input } from "../../UI/Input";
-import { UiButton } from "../../UI/button";
 import styles from "./loginCard.module.css";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function LoginCard() {
+  let navigate = useNavigate();
   const validate = Yup.object({
     email: Yup.string().email("Email is invalid").required("Email is required"),
     password: Yup.string()
@@ -17,7 +17,10 @@ export function LoginCard() {
       .required("Password is required"),
   });
 
-  const submitHandler = (values) => {};
+  const submitHandler = (values) => {
+    console.log(values);
+    navigate("/Home");
+  };
 
   return (
     <Formik
@@ -103,7 +106,7 @@ export function LoginCard() {
                 label={"password"}
                 type={"password"}
                 paddingBottom={"0"}
-              />
+              />{" "}
             </div>
             <div
               style={{
@@ -118,11 +121,30 @@ export function LoginCard() {
               Forgot password?
             </div>{" "}
             <div className={styles.submit_button}>
-              {" "}
-              <Link to={"/Home"}>
-                {" "}
-                <UiButton name='Login' />
-              </Link>
+              <button
+                type='submit'
+                style={{
+                  display: "inline-block",
+
+                  minHeight: "min-content",
+                  borderRadius: "8px",
+
+                  boxShadow:
+                    "0 0 rgb(0 0 0 / 20%), 0 0 rgb(0 0 0 / 14%), 0 0 rgb(0 0 0 / 12%)",
+                  backgroundColor: "#48a6eb",
+                  flex: " 1 1",
+
+                  lineHeight: "42px",
+                  minWidth: "220px",
+                  fontWeight: "500",
+                  padding: "2px",
+                  width: "36vw",
+                  color: "white",
+                  fontsize: "1.3rem",
+                }}>
+                login
+              </button>
+
               <div
                 style={{
                   width: "100%",
