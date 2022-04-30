@@ -1,6 +1,6 @@
 import BasicModal from "../UI/Modal";
 import Header from "./Header/Header";
-import MiniDrawer from "./sideBar/UisidBar";
+import MiniDrawer from "./MiniDrawer/UisidBar";
 
 function Home() {
   return (

@@ -7,6 +7,7 @@ import { UiButton } from "../../UI/button";
 import styles from "./loginCard.module.css";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 export function LoginCard() {
   const validate = Yup.object({
@@ -94,9 +95,9 @@ export function LoginCard() {
               <Input
                 value={formik.values.password}
                 onChange={formik.handleChange}
-                // error={
-                //   formik.touched.password && Boolean(formik.errors.password)
-                // }
+                error={
+                  formik.touched.password && Boolean(formik.errors.password)
+                }
                 helperText={formik.touched.password && formik.errors.password}
                 name={"password"}
                 label={"password"}
@@ -118,10 +119,10 @@ export function LoginCard() {
             </div>{" "}
             <div className={styles.submit_button}>
               {" "}
-              <UiButton
-                name='Login'
-                disabled={formik.errors.password && formik.errors.password}
-              />
+              <Link to={"/Home"}>
+                {" "}
+                <UiButton name='Login' />
+              </Link>
               <div
                 style={{
                   width: "100%",
