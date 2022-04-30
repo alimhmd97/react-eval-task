@@ -93,7 +93,6 @@ export function LoginCard() {
                 label={"email"}
                 type={"email"}
                 paddingBottom={"34px"}
-                key={"das8"}
               />
               <Input
                 value={formik.values.password}
@@ -135,10 +134,10 @@ export function LoginCard() {
                   flex: " 1 1",
 
                   lineHeight: "42px",
-                  minWidth: "220px",
+                  // minWidth: "200px",
                   fontWeight: "500",
                   padding: "2px",
-                  width: "36vw",
+                  width: "370px",
                   color: "white",
                   fontsize: "1.3rem",
                 }}>
