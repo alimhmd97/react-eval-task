@@ -49,6 +49,11 @@
 .MiniDrawer-toolbar-11 {
   margin-top: -9px !important;
 }
-/* .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill {
-  width: 335px;
-} */
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 10px !important;
+  border-color: 1px solid blanchedalmond !important;
+}
+input {
+  border-radius: 10px !important;
+  border: 1px solid rgb(130, 127, 127) !important;
+}
