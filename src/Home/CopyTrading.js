@@ -12,9 +12,9 @@ function CopyTrading() {
         HeaderText2={"HeaderText2"}
       />
 
-      <div className='row gap-1 p-2'>
+      <div className='row'>
         <div
-          className={"col mx-1"}
+          className={"col-3"}
           style={{
             background: "##202030",
             borderRadius: "15px",
@@ -35,7 +35,7 @@ function CopyTrading() {
           </button>
         </div>
         <div
-          className={"col mx-1"}
+          className={"col-3"}
           style={{
             background: "##202030",
             borderRadius: "15px",
@@ -56,7 +56,7 @@ function CopyTrading() {
           </button>{" "}
         </div>{" "}
         <div
-          className={"col mx-1"}
+          className={"col-3"}
           style={{
             background: "##202030",
             borderRadius: "15px",
@@ -77,7 +77,7 @@ function CopyTrading() {
           </button>{" "}
         </div>{" "}
         <div
-          className={"col mx-1"}
+          className={"col-3"}
           style={{
             background: "##202030",
             borderRadius: "15px",

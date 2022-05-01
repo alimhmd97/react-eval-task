@@ -57,3 +57,9 @@ input {
   border-radius: 10px !important;
   border: 1px solid rgb(130, 127, 127) !important;
 }
+@media (max-width: 768px) {
+  .css-1br01ym {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+}
